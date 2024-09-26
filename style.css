@@ -19,7 +19,7 @@ header {
     background-color: #fff;
     color: #333;
     padding: 10px 0;
-    margin-bottom: 10px; /* Menambahkan jarak antara header dan slider */
+    margin-bottom: 10px; 
 }
 
 .container {
@@ -29,10 +29,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.logo img {
-    height: 50px;
 }
 
 nav ul {
@@ -58,7 +54,7 @@ nav ul li a:hover {
 
 /* Burger Menu Icon */
 .menu-icon {
-    display: none; /* Hide by default */
+    display: none;
     font-size: 30px;
     cursor: pointer;
     color: #333;
@@ -67,6 +63,35 @@ nav ul li a:hover {
 /* Mobile Menu Hidden Initially */
 #navbar {
     display: flex;
+}
+
+/* Mobile Style */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the burger menu */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu items */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: right;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* When the menu is active, show it */
+    #navbar.active ul {
+        display: flex;
+    }
 }
 
 /* Slider Section */
@@ -382,35 +407,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-    /* On mobile devices */
-    .menu-icon {
-        display: block; /* Show the burger menu */
-    }
-
-    nav ul {
-        display: none; /* Hide the menu items */
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        right: 0;
-        width: 200px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: right;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* When the menu is active, show it */
-    #navbar.active ul {
-        display: flex;
-    }
 }
 
 /* Responsif Styling */
