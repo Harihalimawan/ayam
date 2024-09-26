@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rujak Semoga Jaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rujak Semoga Jaya</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider" id="home">
+        <div class="slide active">
+            <img src="gamar/slider2.png" alt="Delicious Food">
+            <div class="info"></div>
+        </div>
+        <div class="slide active">
+            <img src="gamar/slider3.png" alt="Delicious Food">
+            <div class="info"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <img src="gamar/logo.jpg" alt="About Us" class="about-image">
+                <div class="about-text"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <main>
+        <div class="best">
+            <h2>Best Seller</h2>
+        </div>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="gamar/ayam rujak.jpg" alt="Deskripsi Gambar 1">
+                <p>Ayam Rujak</p>
+            </div>
+            <div class="gallery-item">
+                <img src="gamar/katsu1.png" alt="Deskripsi Gambar 2">
+                <p>Ayam Katsu</p>
+            </div>
+            <div class="gallery-item">
+                <img src="gamar/ricarica.png" alt="Deskripsi Gambar 3">
+                <p>Ayam Rica - Rica</p>
+            </div>
+            <div class="gallery-item">
+                <img src="gamar/esteh1.png" alt="Deskripsi Gambar 3">
+                <p>Teh Es</p>
+            </div>
+            <div class="gallery-item">
+                <img src="gamar/nutrisari1.png" alt="Deskripsi Gambar 3">
+                <p>Nutrisari</p>
+            </div>
+            <div class="gallery-item">
+                <img src="gamar/coklat.png" alt="Deskripsi Gambar 3">
+                <p>Chocolatos</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Google Maps Section -->
+    <section id="contact-map">
+        <div class="container">
+            <div class="contact-map-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Info</h2>
+                    <p><i class="fas fa-phone-alt"></i> +6283145303593</p>
+                    <p><i class="fas fa-clock"></i> 08:00 - 24:00</p>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2968378820665!2d100.43055027496513!3d-0.9263724990646692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b9ff958412e1%3A0xc509c0a5db4b2c3e!2sAyam%20Rujak%20Semoga%20Jaya!5e0!3m2!1sid!2sid!4v1726570105002!5m2!1sid!2sid" 
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rujak Semoga Jaya. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider Animation -->
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 3000);
+    </script>
+    <script>
+        function showDetail(item) {
+            document.querySelectorAll('.detail').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            document.getElementById(item).style.display = 'block';
+            document.getElementById('detail-section').style.display = 'block';
+        }
+
+        function hideDetail() {
+            document.getElementById('detail-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
