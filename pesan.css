@@ -1,4 +1,4 @@
-/* General Styles */
+/* Header Styling */
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +20,6 @@ header {
     color: #333;
     padding: 10px 0;
     margin-bottom: 10px; /* Menambahkan jarak antara header dan slider */
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 2rem;
 }
 
 .container {
@@ -59,6 +54,19 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Burger Menu Icon */
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mobile Menu Hidden Initially */
+#navbar {
+    display: flex;
 }
 
 .contact {
@@ -219,4 +227,71 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    /* On mobile devices */
+    .menu-icon {
+        display: block; /* Show the burger menu */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu items */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: right;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* When the menu is active, show it */
+    #navbar.active ul {
+        display: flex;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .map-container {
+        width: 95%;
+    }
+
+    .map-section h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .map-section h2 {
+        font-size: 22px;
+    }
 }
