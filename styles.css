@@ -97,20 +97,6 @@ nav ul li a:hover {
         margin: 10px 0;
     }
 }
-
-/* Burger Menu Icon */
-.menu-icon {
-    display: none; /* Hide by default */
-    font-size: 30px;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Mobile Menu Hidden Initially */
-#navbar {
-    display: flex;
-}
-
 /* About Section */
 .about-section {
     padding: 50px 0;
