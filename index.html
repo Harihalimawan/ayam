@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayam Rujak Semoga Jaya</title>
+    <title>Rujak Semoga Jaya</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -13,7 +13,11 @@
             <div class="logo">
                 <h1>Ayam Rujak Semoga Jaya</h1>
             </div>
-            <nav>
+            <!-- Burger Menu Icon -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for burger icon -->
+            </div>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -27,11 +31,11 @@
     <!-- Slider Section -->
     <section class="slider" id="home">
         <div class="slide active">
-            <img src="slider1.png" alt="Delicious Food">
+            <img src="gamar/slider1.png" alt="Delicious Food">
             <div class="info"></div>
         </div>
         <div class="slide active">
-            <img src="slider3.png" alt="Delicious Food">
+            <img src="gamar/slider3.png" alt="Delicious Food">
             <div class="info"></div>
         </div>
     </section>
@@ -61,7 +65,7 @@
                 <p>Ayam Katsu</p>
             </div>
             <div class="gallery-item">
-                <img src="ricarica.png" alt="Deskripsi Gambar 3">
+                <img src="gamar/ricarica.png" alt="Deskripsi Gambar 3">
                 <p>Ayam Rica - Rica</p>
             </div>
             <div class="gallery-item">
@@ -103,6 +107,19 @@
     <footer>
         <p>&copy; 2024 Rujak Semoga Jaya. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Get elements
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+    
+        // Add click event to menu icon
+        menuIcon.addEventListener('click', () => {
+            // Toggle active class on navbar
+            navbar.classList.toggle('active');
+        });
+    
+        </script>
 
     <!-- JavaScript for Slider Animation -->
     <script>
