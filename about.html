@@ -13,7 +13,11 @@
             <div class="logo">
                 <h1>Tentang Kami</h1>
             </div>
-            <nav>
+            <!-- Burger Menu Icon -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for burger icon -->
+            </div>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -43,5 +47,18 @@
     <footer>
         <p>&copy; 2024 Rujak Semoga Jaya. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Get elements
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+    
+        // Add click event to menu icon
+        menuIcon.addEventListener('click', () => {
+            // Toggle active class on navbar
+            navbar.classList.toggle('active');
+        });
+    
+        </script>
 </body>
 </html>
