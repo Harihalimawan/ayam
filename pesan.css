@@ -1,4 +1,4 @@
-/* Header Styling */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* Header Styling */
 header {
     background-color: #fff;
     color: #333;
@@ -69,6 +69,7 @@ nav ul li a:hover {
     display: flex;
 }
 
+/* Contact Section Styling */
 .contact {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -87,7 +88,8 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
     padding: 1rem;
     margin: 0.5rem 0;
     border: 1px solid #ddd;
@@ -108,6 +110,7 @@ nav ul li a:hover {
     background: #ff6347;
 }
 
+/* Menu Container */
 .menu-container {
     background-color: white;
     padding: 20px;
@@ -127,6 +130,7 @@ hr {
     margin: 0 auto 20px auto;
 }
 
+/* Map Section */
 #contact-map {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -138,6 +142,7 @@ hr {
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
 .contact-left {
     background-color: #fff;
     padding: 40px;
@@ -160,7 +165,8 @@ hr {
     flex-direction: column;
 }
 
-.contact-left input, .contact-left textarea {
+.contact-left input,
+.contact-left textarea {
     margin-bottom: 20px;
     padding: 15px;
     font-size: 16px;
@@ -221,6 +227,8 @@ hr {
     height: 100%;
     border: 0;
 }
+
+/* Footer */
 footer {
     background: #333;
     color: white;
@@ -229,6 +237,7 @@ footer {
     margin-top: auto;
 }
 
+/* Responsive Menu and Mobile Styling */
 @media (max-width: 768px) {
     /* On mobile devices */
     .menu-icon {
@@ -256,10 +265,8 @@ footer {
     #navbar.active ul {
         display: flex;
     }
-}
 
-/* Responsive Styling */
-@media (max-width: 768px) {
+    /* Additional responsive styling */
     header h1 {
         font-size: 28px;
     }
@@ -267,10 +274,6 @@ footer {
     nav ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
     }
 
     .map-container {
